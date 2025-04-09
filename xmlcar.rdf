@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology"
+     xml:base="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology"/>
+    
+
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isBrandOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasCountryOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasCountryOfOrigin">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isCountryOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isAnEquipmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isAnEquipmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Equipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isBrandOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isBrandOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isCountryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isCountryOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Audi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Audi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Germany"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Berline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Berline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Clio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Clio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Renault"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#5Seats"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Equipment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Familial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Familial">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#5Seats"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Fortwo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Fortwo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Smart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#2Seats"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#GermanBrand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#GermanBrand">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasCountryOfOrigin"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Germany"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#GermanCar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#GermanCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#GermanBrand"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Luxury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Luxury">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Master -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Master">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Renault"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#3Seats"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Mercedes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Mercedes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Germany"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#NumberOfSeats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#NumberOfSeats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Peugeot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Peugeot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#France"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#R8 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#R8">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Model"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#hasBrand"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Audi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#2Seats"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Renault -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Renault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Smart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Smart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Brand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Sportive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Sportive">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#2Seats"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#cost"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Utilitary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Utilitary">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#isEquipedWith"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#3Seats"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#2Seats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#2Seats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#NumberOfSeats"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#3Seats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#3Seats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#NumberOfSeats"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#5Seats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#5Seats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#NumberOfSeats"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#Country"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
