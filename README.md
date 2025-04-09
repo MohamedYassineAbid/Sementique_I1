@@ -88,19 +88,6 @@ This query retrieves cars and their corresponding types (e.g., Familial, Luxury)
 
 ---
 
-## SWRL Rules
-
-### Example Rule: Define Familial Cars
-A car is familial if it has 5 seats and costs less than 15,000.
-
-```text
-Car(?c) ^ isEquipedWith(?c, ?e) ^ NumberOfSeats(?e, 5) ^ cost(?c, ?price) ^ swrlb:lessThan(?price, 15000) → Familial(?c)
-```
-
-This rule automates the classification of cars based on equipment and cost criteria.
-
----
-
 ## Screenshots
 
 ### 1. Ontology Classes
@@ -118,4 +105,4 @@ This rule automates the classification of cars based on equipment and cost crite
 
 ## Conclusion
 
-The ontology provides a robust framework for representing and reasoning about the automobile domain. It simplifies querying and analysis, enhances semantic understanding, and facilitates knowledge sharing across applications. The use of SPARQL queries and SWRL rules demonstrates its practical applications in semantic reasoning and intelligent systems.
+The ontology provides a robust framework for representing and reasoning about the automobile domain. It simplifies querying and analysis, enhances semantic understanding, and facilitates knowledge sharing across applications. The use of SPARQL queries demonstrates its practical applications in semantic reasoning and intelligent systems.
