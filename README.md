@@ -1,9 +1,121 @@
-# Sementique_I1
+# Car Ontology
 
-## Semantic Web Application for Higher Education
-Project Overview
-This project implements a Semantic Web application for Aix-Marseille University. It demonstrates how Semantic Web technologies can improve data management and information exchange in higher education. By leveraging RDF, RDFS, and SPARQL, the application models various university components, such as departments, roles, campuses, and subjects, and provides meaningful insights through semantic queries.
+This repository contains an OWL file representing a car ontology. The ontology includes classes, properties, and individuals related to cars, brands, types, and equipment. It provides a detailed representation of the automobile domain using equivalence axioms, subclass relationships, and domain-specific constraints.
 
-## Domain Definition
-The chosen domain is a higher education institution, exemplified by Aix-Marseille University. This domain was selected due to its complexity and need for efficient data management. Universities consist of diverse entities like faculties, departments, and roles, which benefit from the semantic relationships provided by RDF and RDFS. The project's goal is to highlight how Semantic Web technologies can facilitate better organization and service delivery within such institutions.
+---
 
+## Ontology Domain: Automobile Industry
+
+The ontology models the domain of automobiles, focusing on car brands, models, types, countries of origin, and equipment. It aims to enable semantic reasoning about cars based on features such as type, cost, and equipment.
+
+### Justification for Domain Choice
+- **Structured**: The automobile domain has clear entities and relationships (e.g., brands, models, types).
+- **Relevant**: Automobiles are integral to transportation, economy, and personal mobility.
+- **Rich in Data**: Automotive datasets are available from manufacturers and research entities.
+- **Practical**: The ontology supports applications in e-commerce, research, and recommendation systems.
+
+---
+
+## Namespaces Used
+
+| Prefix | URI                                                   |
+|--------|-------------------------------------------------------|
+| rdf    | http://www.w3.org/1999/02/22-rdf-syntax-ns#          |
+| rdfs   | http://www.w3.org/2000/01/rdf-schema#               |
+| owl    | http://www.w3.org/2002/07/owl#                      |
+| xsd    | http://www.w3.org/2001/XMLSchema#                   |
+| :      | http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology# |
+
+The namespaces ensure compliance with semantic web standards and facilitate extensibility.
+
+---
+
+## Classes and Properties
+
+### Key Classes
+1. **Car**: Represents automobiles.
+2. **Brand**: Defines car manufacturers (e.g., Audi, Renault).
+3. **Model**: Specifies specific car versions (e.g., Clio, R8).
+4. **Type**: Categorizes cars (e.g., Familial, Sportive, Luxury).
+5. **Country**: Represents countries of origin (e.g., France, Germany).
+6. **Equipment**: Details features like `NumberOfSeats`.
+
+### Subclasses
+- **Type**: Includes subclasses like Familial and Luxury, based on specific conditions.
+
+### Object Properties
+| Name               | Domain      | Range          |
+|--------------------|-------------|----------------|
+| hasBrand           | Car         | Brand          |
+| isEquipedWith      | Car         | Equipment      |
+| hasCountryOfOrigin | Brand       | Country        |
+
+### Data Properties
+| Name     | Domain | Data Type   |
+|----------|--------|-------------|
+| cost     | Car    | xsd:integer |
+
+---
+
+## SPARQL Queries
+
+### Query 1: Retrieve all German Cars and their Brands
+
+```sparql
+PREFIX : <http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?car ?brand WHERE {
+  ?car rdf:type :GermanCar .
+  ?car :hasBrand ?brand .
+}
+```
+
+This query identifies cars produced by German brands and links each car to its manufacturer.
+
+### Query 2: List Cars with Specific Types
+
+```sparql
+PREFIX : <http://www.semanticweb.org/gleroy/ontologies/2018/9/car-ontology#>
+
+SELECT ?car ?type WHERE {
+  ?car rdf:type :Car .
+  ?car :hasType ?type .
+}
+```
+
+This query retrieves cars and their corresponding types (e.g., Familial, Luxury).
+
+---
+
+## SWRL Rules
+
+### Example Rule: Define Familial Cars
+A car is familial if it has 5 seats and costs less than 15,000.
+
+```text
+Car(?c) ^ isEquipedWith(?c, ?e) ^ NumberOfSeats(?e, 5) ^ cost(?c, ?price) ^ swrlb:lessThan(?price, 15000) → Familial(?c)
+```
+
+This rule automates the classification of cars based on equipment and cost criteria.
+
+---
+
+## Screenshots
+
+### 1. Ontology Classes
+![Classes Screenshot](https://github.com/MohamedYassineAbid/Sementique_I1/blob/main/Screenshots/Screenshot%20from%202025-04-09%2016-42-21.png)
+### 2. Object Properties
+![Object Properties Screenshot](https://github.com/MohamedYassineAbid/Sementique_I1/blob/main/Screenshots/Screenshot%20from%202025-04-09%2016-46-42.png)
+
+### 3. Data Properties
+![Data Properties Screenshot](https://github.com/MohamedYassineAbid/Sementique_I1/blob/main/Screenshots/Screenshot%20from%202025-04-09%2016-46-46.png)
+
+### 4. Individuals
+![Individuals Screenshot](https://github.com/MohamedYassineAbid/Sementique_I1/blob/main/Screenshots/Screenshot%20from%202025-04-09%2016-46-56.png)
+
+---
+
+## Conclusion
+
+The ontology provides a robust framework for representing and reasoning about the automobile domain. It simplifies querying and analysis, enhances semantic understanding, and facilitates knowledge sharing across applications. The use of SPARQL queries and SWRL rules demonstrates its practical applications in semantic reasoning and intelligent systems.
