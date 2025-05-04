@@ -1,0 +1,1615 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdfs1="http://www.semanticweb.org/ontologie-voiture#rdfs:">
+    <Ontology rdf:about="http://www.semanticweb.org/abidology/ontologies/2025/4/AbidVoiture"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#rdfs:comment -->
+
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#rdfs:comment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#rdfs:label -->
+
+    <AnnotationProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#rdfs:label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#aMarque -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#aMarque">
+        <inverseOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#estMarqueDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:label xml:lang="fr">a pour marque</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#aPaysOrigine -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine">
+        <inverseOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#estPaysDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#estEquipeDe -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#estEquipeDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipementDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#estEquipementDe -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#estEquipementDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#estMarqueDe -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#estMarqueDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:label xml:lang="fr">est la marque de</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#estPaysDe -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#estPaysDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#prix -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/ontologie-voiture#prix">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:domain>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Prix du modèle de voiture en euros</rdfs:comment>
+        <rdfs:label xml:lang="fr">Prix</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Audi -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Audi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                        <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Berline -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Berline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#CinqSieges -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#CinqSieges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Clio -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Clio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#DeuxSieges -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#DeuxSieges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Equipement -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Familiale -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Familiale">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Fortwo -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Fortwo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#Smart"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Luxe -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Luxe">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Marque -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque">
+        <rdfs1:comment xml:lang="fr">Fabricant de voitures</rdfs1:comment>
+        <rdfs1:label xml:lang="fr">Marque</rdfs1:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#MarqueAllemande -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                        <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                        <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Master -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Master">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Utilitaire"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Mercedes -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Mercedes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                        <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Modele -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Modele">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#NombreDeSieges -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Pays -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Peugeot -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Peugeot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#France"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#R8 -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#R8">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</hasValue>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Renault -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Renault">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#France"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Smart -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Smart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                        <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Sportive -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Sportive">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#TroisSieges -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#TroisSieges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Type -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Utilitaire -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Utilitaire">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Voiture -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture">
+        <rdfs1:comment xml:lang="fr">Classe représentant les automobiles</rdfs1:comment>
+        <rdfs1:label xml:lang="fr">Voiture</rdfs1:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#VoitureAllemande -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Allemagne -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/ontologie-voiture#Allemagne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#France -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/ontologie-voiture#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#Italie -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/ontologie-voiture#Italie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologie-voiture#USA -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/ontologie-voiture#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <hasValue rdf:resource="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</xsd:maxInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                        <someValuesFrom>
+                            <rdfs:Datatype>
+                                <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </withRestrictions>
+                            </rdfs:Datatype>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Utilitaire"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <someValuesFrom>
+                    <rdfs:Datatype>
+                        <onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+                            </rdf:Description>
+                        </withRestrictions>
+                    </rdfs:Datatype>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    <Restriction>
+        <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+        <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <allValuesFrom rdf:resource="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
