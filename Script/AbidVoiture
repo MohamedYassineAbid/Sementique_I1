@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/abidology/ontologies/2025/4/AbidVoiture"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/abidology/ontologies/2025/4/AbidVoiture">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipementDe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.semanticweb.org/ontologie-voiture#rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Peugeot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#USA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Master"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#France"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Mercedes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Smart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Utilitaire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estPaysDe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Italie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Berline"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.semanticweb.org/ontologie-voiture#rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Clio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Fortwo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estMarqueDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <Class IRI="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+            </ObjectAllValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+                <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <Class IRI="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+            </ObjectAllValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Utilitaire"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+                <Class IRI="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+                <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+            <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Berline"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Clio"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Clio"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Clio"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Clio"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#CinqSieges"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Clio"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Familiale"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Fortwo"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Fortwo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Smart"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Fortwo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Fortwo"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Master"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Master"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Utilitaire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Master"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Master"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Master"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Mercedes"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Mercedes"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Mercedes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+            <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Peugeot"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Peugeot"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+            <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#France"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#Audi"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+            <Class IRI="http://www.semanticweb.org/ontologie-voiture#DeuxSieges"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#R8"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Renault"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+            <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#France"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Smart"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Smart"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#MarqueAllemande"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Smart"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+            <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Luxe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Sportive"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#TroisSieges"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#NombreDeSieges"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Utilitaire"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#VoitureAllemande"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Allemagne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#Italie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologie-voiture#USA"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipementDe"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estMarqueDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estPaysDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipementDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipementDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estMarqueDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estPaysDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aMarque"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#aPaysOrigine"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Pays"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipeDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Equipement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estEquipementDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estMarqueDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Voiture"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologie-voiture#estPaysDe"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Marque"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+        <Class IRI="http://www.semanticweb.org/ontologie-voiture#Modele"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/ontologie-voiture#prix"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.semanticweb.org/ontologie-voiture#rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#Marque</IRI>
+        <Literal xml:lang="fr">Fabricant de voitures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.semanticweb.org/ontologie-voiture#rdfs:label"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#Marque</IRI>
+        <Literal xml:lang="fr">Marque</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.semanticweb.org/ontologie-voiture#rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#Voiture</IRI>
+        <Literal xml:lang="fr">Classe représentant les automobiles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.semanticweb.org/ontologie-voiture#rdfs:label"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#Voiture</IRI>
+        <Literal xml:lang="fr">Voiture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#aMarque</IRI>
+        <Literal xml:lang="fr">a pour marque</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#estMarqueDe</IRI>
+        <Literal xml:lang="fr">est la marque de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#prix</IRI>
+        <Literal xml:lang="fr">Prix du modèle de voiture en euros</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.semanticweb.org/ontologie-voiture#prix</IRI>
+        <Literal xml:lang="fr">Prix</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
