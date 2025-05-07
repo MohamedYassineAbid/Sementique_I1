@@ -124,7 +124,9 @@ voiture:Sportive a owl:Class ;
 
 ## Phase 5 : Règles SWRL  
 ### **Règles Ajoutées** :  
-IN PROGRESS...
+```turtle
+Voiture(?v) ^ estEquipeDe(?v, ?s) ^ DeuxSieges(?s) ^ prix(?v, ?p) ^ swrlb:greaterThan(?p, 50000) → Sportive(?v)
+
 ---
 
 ## Installation et Utilisation  
