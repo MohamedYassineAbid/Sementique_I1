@@ -132,4 +132,4 @@ Voiture(?v) ^ estEquipeDe(?v, ?s) ^ DeuxSieges(?s) ^ prix(?v, ?p) ^ swrlb:greate
 ## Installation et Utilisation  
 - **Ouvrir l'ontologie** : Utilisez Protégé (https://protege.stanford.edu/).  
 - **Exécuter les requêtes** : Via l'onglet SPARQL Query dans Protégé.  
-- **Activer le Reasoner** : Pellet ou HermiT pour les inférences.
+- **Activer le Reasoner** : HermiT pour les inférences.
